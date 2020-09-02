@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Pay Smart</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/animate.css">
+</head>
+<body>
+    <main>
+        <div class="style-position">
+            <section class="welcome-msg">
+                <h1 class="welcome-msg__heading">Welcome to pay smart</h1>
+            </section>
+        </div>
+        <section class="signUp">
+            <h1 class="sign-up">sign up</h1>
+            <form action="/register" method="post" name="fregister">
+                <input type="text" name="txtUsername" id="username" class="usrname " placeholder=" Username" required>
+                <input type="email" name="txtEmail" id="useremail" class="usremail" placeholder="Email" required>
+                <input type="tel" name="txtTel" id="usertel" class="usrtel" placeholder="Phone number" required>
+                <input type="password" name="txtPswrd" id="userpswrd" class="usrpswrd" onkeyup="validate()" placeholder="Password" minlength="8" maxlength="16"  required>
+                <input type="password" name="txtCpswrd" id="usercpswrd" class="usrcpswrd" onkeyup="validate()" placeholder="Confirm password" required>
+                <button type="submit" class="btn-register" onclick="validate()">Register</button>
+                <input type="checkbox" name="chkTerms" id="chkboxterms" class="chkbx-terms" required>
+                <label for="chkboxterms" class="chkbox-terms">Click here to agree to our
+                     <a href="#" class="terms-conditions">Terms &amp; conditions</a>&quest;</label>
+                     
+            </form>
+            <p class="login-option">Already have an account? <a href="/" class="login-option__link">login here</a></p>
+        </section>../index.html
+    </main>
+    <script src="../src/script.js" async defer></script>
+</body>
+</html>

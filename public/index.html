@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Pay Smart </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+<body>
+    <main>
+        <section class="login">
+            <div class="login-position">
+                <div class="login-form">
+                    <h1 class="login-heading"><i class="fas fa-user-circle fa-5x icon-style"></i></h1>
+                    <button class="sign-google__option"><span class="option-img"><img src="./images/google icon.png" alt="Google" srcset="" class="google-img"></span><span class="option-text"><span class="style-continue__option--text">continue</span> with <span class="style-option__google--text">google</span></span></button>
+                   <fieldset>
+                    <legend>or</legend>
+                   </fieldset>
+                        <form action="/" method="post" class="login-form__data" enctype="multipart/form-data">
+                            <label for="input-usrname" class="form-label__usrname" >username</label>
+                            <input type="text" name="usrName" id="input-usrname"class="form-input__usrname" placeholder="for example paullaster" required>
+                            <label for="input-passcord" class="form-label__pswrd">password</label>
+                            <input type="password" name="passCord" id="input-passcord" class="form-input__pswrd" minlength="8"  maxlength="16" required>
+                            <button type="submit" class="btn-submit">continue</button>
+                            
+                        </form>
+                        <input type="checkbox" name="chkbxSigned" id="chkbxSigned" class="check-box__signed">
+                        <label for="chkbxSigned" class="label-signed__in">keep me signed in until sign out</label>
+                        <button class="frgt-pswrd">forgot password &quest;</button>
+
+                        <p class="register">don&apos;t have account yet&quest;<a href="/register" class="login-link__register">sign up</a></p>
+                
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./src/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.login-form__data{
+    margin: 2em;
+}
+.form-label__usrname{
+    display: block;
+   /* padding-bottom: .8em;*/
+    font-size: 2.8em;
+    font-weight: 500;
+    font-family: monospace;
+    text-transform: capitalize;
+    position: absolute;
+    top:19.5em;
+    left: 15.5%;
+    text-shadow: .1em .4em .8em transparent;
+}
+.form-label__usrname::after{
+    content: "*";
+    color: red;
+    text-shadow: .1em .4em .8em transparent;
+}
+.form-label__pswrd{
+    display: block;
+    /* padding-bottom: .8em;*/
+     font-size: 2.8em;
+     font-weight: 500;
+     font-family: monospace;
+     text-transform: capitalize;
+     position: absolute;
+     top:24.5em;
+     left: 15.5%;
+     text-shadow: .1em .4em .8em transparent;
+}
+.form-label__pswrd::after{
+    content: "*";
+    color: red;
+    text-shadow: .1em .4em .8em transparent;
+}
+.form-input__usrname{
+    width: 70%;
+    height: 7vh;
+    border-radius: .3em;
+    border: none;
+    margin-bottom: .8em;
+    font-size: 2em;
+    font-family: monospace;
+    display: block;
+    position:absolute;
+    top: 29.5em;
+    left: 14%;
+    text-align: justify;
+    box-shadow: .1em .4em .8em 0 transparent;
+}
+.form-input__pswrd{
+    width: 70%;
+    height: 7vh;
+    border-radius: .3em;
+    border: none;
+    margin-bottom: .8em;
+    font-size: 2em;
+    font-family: monospace;
+    display: block;
+    position:absolute;
+    top: 36.5em;
+    left: 14%;
+    text-align: justify;
+    box-shadow: .1em .4em .8em 0 transparent;
+}
+.form-input__usrname:focus{
+    outline: none;
+}
+.form-input__pswrd:focus{
+    overflow: hidden;
+    outline: none;
+}
+.btn-submit{
+    background: rgba(63, 235, 63, 0.8);
+    display: block;
+    position: absolute;
+    top: 34em;
+    left: 14%;
+    width: 70%;
+    border-radius: .3em;
+    border: none;
+    height: 7vh;
+    text-transform: capitalize;
+    font-size: 2.5em;
+    font-weight: 700;
+    font-family: monospace;
+    box-shadow: .1em .4em .8em 0 transparent;
+}
+.btn-submit:active{
+    outline: none;
+}
+.frgt-pswrd{
+    background: transparent;
+    border: none;
+    color: rgb(42, 42, 173);
+    text-transform: capitalize;
+    font-weight: 600;
+    position: absolute;
+    top: 49em;
+    left:17%;
+    text-shadow: .1em .4em .8em transparent;
+}
+.check-box__signed{
+    display: block;
+    /* outline-offset: .1em; */
+    /* outline: .2em grey solid; */
+    height: 3vh;
+    position: absolute;
+    top: 59.1em;
+    left: 18%;
+    box-shadow: .1em .4em .8em 0 transparent;
+}
+.label-signed__in{
+    display: block;
+    font-size: 2em;
+    font-weight: 500;
+    font-family: monospace;
+    position: absolute;
+    top: 48.5em;
+    left: 21.5%;
+    text-shadow: .1em .4em .8em transparent;
+}
+.label-signed__in::first-letter{
+    text-transform: capitalize;
+}
+.register{
+    position: absolute;
+    top: 52.5em;
+    left: 23%;
+    font-weight: 500;
+    font-size: 2em;
+    font-family: monospace;
+    text-shadow: .1em .4em .8em transparent;
+}
+.register::first-letter{
+    text-transform: capitalize;
+}
+.login-link__register{
+    display: inline-block;
+    text-decoration: none;
+    padding-left: .1em;
+    
+}
+.login-link__register::first-letter{
+    text-transform: capitalize;
+}
+.login-heading{
+   position: absolute;
+   top: 4em;
+   left: 42%;
+   box-shadow: .1em .4em .8em 0 transparent;
+}
+.icon-style{
+    display: block;
+    color: blue;
+    
+
+}

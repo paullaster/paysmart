@@ -1,0 +1,132 @@
+  /* This is the entry point to this application*/
+  const express = require('express');
+  //const config = require('./server/configure').config();
+  const bodyParser = require('body-parser');
+  const http = require('http');
+  const fs = require('fs');
+  const app = express();
+  const port = 8180;
+  //app = config(app);
+  app.use(bodyParser.json());
+  const path = require('path');
+  const db = require('./db/db');
+ 
+  const user = "user";
+  const Admin = "admin";
+  const Sacco = "sacco";
+  const NTSA = "ntsa";
+
+
+  app.use(express.static('public'));
+  app.listen(port);
+   app.get('/', (req,res)=>{
+        res.sendFile(__dirname, + '/index.html');
+       res.sendFile(path.join(__dirname, 'index.html'));
+   });
+   
+   app.get('/getPaysmart', (req,res)=>{
+       db.getDB().collection(user).find({},{"username":1, "email":1, "_id":0}).toArray((err, documents)=>{
+           if(err){
+               console.log(err);
+           }
+           else{
+               console.log(documents);
+               res.json(documents);
+           }
+
+       });
+   });
+
+   db.connect((err)=>{
+       if(err){
+           console.log(`Unable to connect to the database`);
+           process.exit(1);
+
+       }
+       else{
+           app.listen(port, ()=>{
+               console.log(`connected to the database successfully, app listening on port ${port}`);
+           });
+       }
+   })
+
+
+
+
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+app.use(bodyParser.json());
+const path = require('path');
+//const db = require('./db/db');
+//const collectionUser = "users";
+const port = 9090;  
+
+
+app.use(express.static('public'));
+// roots start here
+//route for landing page
+app.get('/',(req,res,err)=>{
+    if(err){
+        res.send(`The page for the URL provided can not be found! 404 ERROR`);
+        console.log(`ERROR 404 page not found ${err}`);
+    }
+    else{
+        res.sendFile(path.join(__dirname, "index.html"));
+    }
+    
+});
+//posting logging credentials
+app.post('/', (req, res)=>{
+    res.send(collectionUser.insert(req.body));
+    
+   //res.send("logged in successfully");
+});
+
+app.get('/register',(req,res)=>{
+    
+        res.sendFile(path.join(__dirname, 'public/html/register.html'));
+    
+});
+
+app.post('/register', (req,res)=>{
+    
+        res.send("Registration details submitted succesfully");
+      
+} );
+
+app.get('/about_us', (req,res,err)=>{
+    
+        res.sendFile(path.join(__dirname, 'public/html/about-us.html'));
+    
+   
+});
+
+
+app.get('/terms', (req,res,err)=>{
+    if(err){
+        res.send(`The page for the URL provided can not be found! 404 ERROR`);
+        console.log(`ERROR 404 page not found ${err}`);
+    }
+    else{
+        res.sendFile(path.join(__dirname, "public/tac.html"));
+    }
+   
+});
+
+
+
+//connection to the database
+
+// db.connect((err)=>{
+//     if(err){
+//         console.log(`Unable to connect to the database! Kindly start your application again`);
+//          process.exit(1)
+//     }
+//     else{
+//         app.listen(port, ()=>{
+//             console.log(`Connected to the dtabase and Listening on port ${port}`);
+//         });
+//     }
+// });
